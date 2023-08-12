@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./Sign_up.css">
+</head>
+<body>
+  <div class="signup-form">
+    <h2 class="form-title">Sign Up</h2>
+    <p class="login-prompt">Already a member? <a href="login.html">Login</a></p>
+    <form>
+      <div class="form-group">
+        <label for="role">Role:</label>
+        <select id="role" name="role">
+          <option value="doctor">Doctor</option>
+          <option value="patient">Patient</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="submit-button">Submit</button>
+        <button type="reset" class="reset-button">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

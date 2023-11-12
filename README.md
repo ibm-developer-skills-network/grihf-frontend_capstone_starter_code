@@ -12,7 +12,7 @@ Medical Appointment Application
 3. Profile Management
 4. News feeds and Training
 5. Navigation
-6.Website Administration
+6. Website Administration
 
 # Project Requirements
 A user-friendly, intuitive, and accessible platform that helps connect patients with doctors and specialists for consultations and medical prescriptions

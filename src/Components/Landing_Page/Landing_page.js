@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
 
-const Landing_Page = () => {
+function Landing_Page () {
   return (
     <section className="hero-section">
       <div>
@@ -19,11 +19,11 @@ const Landing_Page = () => {
               <div className="blob-cont">
                   <div className="blue blob"></div>
               </div>
-              <div class="blob-cont">
+              <div className="blob-cont">
                   <div className="blue1 blob"></div>
               </div>
             <h4>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae ducimus. Suscipit omnis quibusdam non cum rem voluptatem!
+            StayHealthy conducted an extensive survey to assess the medical facilities available in remote areas and found that several patients have a tough time finding the right doctor at the right time. The initiative from StayHealthy will help get patients access to general physicians and specialists at the right time easily.
             </h4>
             <a href="#services">
               <button className="button">Get Started</button>

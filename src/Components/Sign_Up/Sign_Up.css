@@ -77,6 +77,8 @@
 .btn-group {
     margin-top: .0001px;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 .btn {
     padding: 10px 20px;

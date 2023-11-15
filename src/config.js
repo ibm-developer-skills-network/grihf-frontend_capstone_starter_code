@@ -1,4 +1,4 @@
-export const API_URL = window.location.hostname === "localhost" ? "<add your theia server side url>" : "add your theia server side url";
+export const API_URL = window.location.hostname === "localhost" ? "https://oussam92ing-8181.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/" : "https://oussam92ing-8181.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/";
 console.log(
     "API_URL :",
     API_URL

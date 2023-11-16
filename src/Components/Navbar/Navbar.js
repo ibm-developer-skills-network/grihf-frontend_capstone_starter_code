@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {Link, useNavigate} from "react-router-dom"
 import "./Navbar.css"
 function Navbar () {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+   
     const navigate = useNavigate();
+    useEffect(() => {
+        // Check if the user is logged 
+        const authToken = sessionStorage.getItem('auth-token');
+        setIsLoggedIn(!!authToken); // Update isLoggedIn state based on the presence of the auth token
+     
+    }, []);
     const handleLogout = () => {
         sessionStorage.clear();
         navigate("/login");
     }
-    const userName = sessionStorage.getItem("name");
+    const userName = sessionStorage.getItem("email");
     const extractedName = userName ? userName.split('@')[0] : '';
-    const isLoggedIn = userName !== null;
-    if (isLoggedIn) {
+    const isUser = userName !== null;
+    if (isLoggedIn && isUser) {
         return (
             <nav>
                 <div className="nav__logo">
@@ -35,7 +43,7 @@ function Navbar () {
                     <li className="link">
                         <a href="#">Appointments</a>
                     </li>
-                    <h1>Welcome, {isLoggedIn && <span>{extractedName}</span>}</h1>
+                    <h1>Welcome, {isUser && <span>{extractedName}</span>}</h1>
                     <li className="link">
                         <button onClick={handleLogout} className="btn1">
                             Logout

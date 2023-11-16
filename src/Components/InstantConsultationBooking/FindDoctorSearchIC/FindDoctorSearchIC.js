@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import './FindDoctorSearchIC.css';
 import { useNavigate, Navigate } from 'react-router-dom';
 
-
+const initSpeciality = [
+    'Dentist', 'Gynecologist/obstetrician', 'General Physician', 'Dermatologist', 'Ear-nose-throat (ent) Specialist', 'Homeopath', 'Ayurveda'
+]
 
 function FindDoctorSearchIC () {
-    const initSpeciality = [
-        'Dentist', 'Gynecologist/obstetrician', 'General Physician', 'Dermatologist', 'Ear-nose-throat (ent) Specialist', 'Homeopath', 'Ayurveda'
-    ]
-    
+  
+
     const [doctorResultHidden, setDoctorResultHidden] = useState(true);
     const [searchDoctor, setSearchDoctor] = useState('');
     const [specialities, setSpecialities] = useState(initSpeciality);
@@ -23,8 +23,10 @@ function FindDoctorSearchIC () {
         <div className='finddoctor'>
             <center>
                 <h1>Find a doctor and Consult instantly</h1>
-                <div>               <i style={{color:'#000000',fontSize:'20rem'}} className="fa fa-user-md"></i>
-</div>                <div className="home-search-container"  style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                <div>               
+                    <i style={{color:'#000000',fontSize:'20rem'}} className="fa fa-user-md"></i>
+                </div>                
+                <div className="home-search-container"  style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                     <div className="doctor-search-box">
                     {/* <p>Perform a search to see the results.</p> */}
 

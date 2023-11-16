@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './FindDoctorSearchIC.css';
 import { useNavigate, Navigate } from 'react-router-dom';
+import { Typography } from '@mui/material';
 
 const initSpeciality = [
     'Dentist', 'Gynecologist/obstetrician', 'General Physician', 'Dermatologist', 'Ear-nose-throat (ent) Specialist', 'Homeopath', 'Ayurveda'
@@ -22,9 +23,11 @@ function FindDoctorSearchIC () {
     return (
         <div className='finddoctor'>
             <center>
-                <h1>Find a doctor and Consult instantly</h1>
+                <Typography style={{fontSize:"16px"}}  sx={{ fontWeight: 'bold', textTransform: 'capitalize' }}>
+                    Find a doctor and Consult instantly
+                </Typography>
                 <div>               
-                    <i style={{color:'#000000',fontSize:'20rem'}} className="fa fa-user-md"></i>
+                    <i style={{color:'#3498db',fontSize:'5rem'}} className="fa fa-user-md"></i>
                 </div>                
                 <div className="home-search-container"  style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                     <div className="doctor-search-box">

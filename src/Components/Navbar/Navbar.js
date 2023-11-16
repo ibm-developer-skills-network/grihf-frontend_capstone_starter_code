@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import {Link, useNavigate} from "react-router-dom"
 import "./Navbar.css"
+import Button from '@mui/material/Button';
+import { Typography } from "@mui/material";
 function Navbar () {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
    
@@ -37,20 +39,20 @@ function Navbar () {
                     
                 </div>
                 <ul className="nav__links active">
-                    <li className="link">
-                        <Link to="/">Home</Link>
-                    </li>
+                        <Link to="/" className="link" >
+                        <a>Home</a>
+                        </Link>
                     <li className="link">
                         <a href="#">Appointments</a>
                     </li>
-                    <Link to="/instant-consultation">
-                        <button className="btn1">Booking</button>
+                    <Link to="/instant-consultation" className="link">
+                        <a>Booking</a>
                     </Link>
-                    <h1>Welcome, {isUser && <span>{extractedName}</span>}</h1>
+                    <Typography>Welcome, {isUser && <span>{extractedName}</span>}</Typography>
                     <li className="link">
-                        <button onClick={handleLogout} className="btn1">
+                        <Button onClick={handleLogout} variant="outlined" color="error">
                             Logout
-                        </button>
+                        </Button>
                     </li>
                 </ul>
             </nav>
@@ -77,7 +79,7 @@ function Navbar () {
                 </div>
                 <ul className="nav__links active">
                     <Link to="/" className="link">
-                        Home
+                        <a>Home</a>
                     </Link>
                     <li className="link">
                         <a href="#">Appointments</a>

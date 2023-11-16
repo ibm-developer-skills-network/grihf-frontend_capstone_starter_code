@@ -43,6 +43,9 @@ function Navbar () {
                     <li className="link">
                         <a href="#">Appointments</a>
                     </li>
+                    <Link to="/instant-consultation">
+                        <button className="btn1">Booking</button>
+                    </Link>
                     <h1>Welcome, {isUser && <span>{extractedName}</span>}</h1>
                     <li className="link">
                         <button onClick={handleLogout} className="btn1">

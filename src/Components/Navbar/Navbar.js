@@ -35,13 +35,9 @@ function Navbar () {
                         >
                             {/* Your SVG icon */}
                         </svg>
-                    </Link>
-                    
+                    </Link>    
                 </div>
                 <ul className="nav__links active">
-                        <Link to="/" className="link" >
-                        <a>Home</a>
-                        </Link>
                     <li className="link">
                         <a href="#">Appointments</a>
                     </li>

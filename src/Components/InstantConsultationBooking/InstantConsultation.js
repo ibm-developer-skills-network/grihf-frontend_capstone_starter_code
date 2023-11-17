@@ -39,14 +39,13 @@ function InstantConsultation () {
                 
             const filtered = doctors.filter(
                 (doctor) =>
-                // 
                 doctor.speciality.toLowerCase().includes(searchText.toLowerCase())
                 
             );
                 
             setFilteredDoctors(filtered);
             setIsSearched(true);
-            window.location.reload()
+           
         }
     };
     const navigate = useNavigate();

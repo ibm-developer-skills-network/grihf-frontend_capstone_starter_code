@@ -38,9 +38,9 @@ function Navbar () {
                     </Link>    
                 </div>
                 <ul className="nav__links active">
-                    <li className="link">
-                        <a href="#">Appointments</a>
-                    </li>
+                    <Link to="/booking-consultation" className="link">
+                        <a >Appointments</a>
+                    </Link>
                     <Link to="/instant-consultation" className="link">
                         <a>Booking</a>
                     </Link>

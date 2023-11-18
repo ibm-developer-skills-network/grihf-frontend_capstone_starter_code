@@ -18,7 +18,6 @@ function FindDoctorSearchIC() {
         setSearchDoctor(speciality); // Update the searchDoctor state with the selected specialty
         setDoctorResultHidden(true); // Hide the search results
         navigate(`/instant-consultation?speciality=${speciality}`);
-        // Remove window.location.reload() to prevent unnecessary reloading
     };
 
     // Function to handle changes in the search input

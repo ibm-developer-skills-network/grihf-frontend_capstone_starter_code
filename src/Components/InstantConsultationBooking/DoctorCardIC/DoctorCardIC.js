@@ -37,8 +37,8 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
     <div className="doctor-card-container">
       <div className="doctor-card-details-container">
         <div className="doctor-card-details">
-        <div className="doctor-card-profile-image-container">
-        {profilePic ? (
+         <div className="doctor-card-profile-image-container">
+         {profilePic ? (
          <img src={profilePic} alt="Doctor Profile" className="doctor-profile-image" />
          
         ) : (
@@ -48,7 +48,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
         // <img src={defaultImage} alt="Placeholder" className="doctor-profile-image-placeholder" />
         
         )}
-        </div>
+          </div>
           <div className="doctor-card-detail-name">{name}</div>
           <div className="doctor-card-detail-speciality">{speciality}</div>
           <div className="doctor-card-detail-experience">{experience} years experience</div>

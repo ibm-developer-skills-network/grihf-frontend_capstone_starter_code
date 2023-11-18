@@ -1,84 +1,74 @@
-
-import DoctorCardIC from "../InstantConsultationBooking/DoctorCardIC/DoctorCardIC";
 import React, { useEffect, useState } from 'react';
+import './FindDoctorSearch.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-
-
+import { Typography } from '@mui/material';
 
 const initSpeciality = [
     'Dentist', 'Gynecologist/obstetrician', 'General Physician', 'Dermatologist', 'Ear-nose-throat (ent) Specialist', 'Homeopath', 'Ayurveda'
 ];
 
 function FindDoctorSearch() {
-    const [searchParams] = useSearchParams();
+    const [doctorResultHidden, setDoctorResultHidden] = useState(true);
+    const [searchDoctor, setSearchDoctor] = useState('');
+    const [specialities, setSpecialities] = useState(initSpeciality);
     const [doctors, setDoctors] = useState([]);
     const [filteredDoctors, setFilteredDoctors] = useState([]);
     const [isSearched, setIsSearched] = useState(false);
-    const [searchDoctor, setSearchDoctor] = useState('');
-    const [doctorResultHidden, setDoctorResultHidden] = useState(true);
-
+    const [searchParams] = useSearchParams();
     const navigate = useNavigate();
-
-    const getDoctorsDetails = () => {
-        fetch('https://api.npoint.io/9a5543d36f1460da2f63')
-            .then(res => res.json())
-            .then(data => {
-                setDoctors(data);
-                filterDoctors(data, searchParams.get('speciality'));
-            })
-            .catch(err => console.log(err));
+    // Function to handle the selection of a specific specialty
+    const handleDoctorSelect = (speciality) => {
+        setSearchDoctor(speciality); // Update the searchDoctor state with the selected specialty
+        setDoctorResultHidden(true); // Hide the search results
+        navigate(`/instant-consultation?speciality=${speciality}`);
     };
 
-    const filterDoctors = (data, speciality) => {
-        if (speciality) {
-            const filtered = data.filter(doctor => doctor.speciality.toLowerCase() === speciality.toLowerCase());
-            setFilteredDoctors(filtered);
-            setIsSearched(true);
-        } else {
-            setFilteredDoctors([]);
-            setIsSearched(false);
-        }
+    // Function to handle changes in the search input
+    const handleSearchInputChange = (text) => {
+        setSearchDoctor(text); // Update the searchDoctor state with the entered text
+        setDoctorResultHidden(false); // Show the doctor results
     };
 
-    const handleSearch = (searchText) => {
-        setSearchDoctor(searchText);
-        if (searchText === '') {
-            setFilteredDoctors([]);
-            setIsSearched(false);
-        } else {
-            const filtered = doctors.filter(doctor =>
-                doctor.speciality.toLowerCase().includes(searchText.toLowerCase())
-            );
-            setFilteredDoctors(filtered);
-            setIsSearched(true);
-        }
-    };
+    // Filter specialties based on the entered search text
+    const filteredSpecialities = specialities.filter(speciality =>
+        speciality.toLowerCase().includes(searchDoctor.toLowerCase())
+    );
 
-    useEffect(() => {
-        getDoctorsDetails();
-    }, [searchParams]);
 
     return (
         <div className='finddoctor'>
             <center>
-                <div className="home-search-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '150px' }} >
+                {/* Search Container */}
+                <div className="home-search-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '150px' }}>
                     <div className="doctor-search-box">
+                        {/* Search Input */}
                         <input
                             type="text"
                             className="search-doctor-input-box"
                             placeholder="Search doctors by specialty..."
                             value={searchDoctor}
-                            onChange={(e) => handleSearch(e.target.value)}
+                            onChange={(e) => handleSearchInputChange(e.target.value)}
                             onFocus={() => setDoctorResultHidden(false)}
                             onBlur={() => setDoctorResultHidden(true)}
                         />
+                        {/* Search Results */}
                         <div className="search-doctor-input-results" hidden={doctorResultHidden}>
-                            {isSearched && filteredDoctors.length > 0 ? (
-                                filteredDoctors.map(doctor => <DoctorCardIC className="doctorcard" {...doctor} key={doctor.name} />)
-                            ) : (
-                                <p>No doctors found.</p>
-                            )}
+                            {/* Display filtered specialties */}
+                            {filteredSpecialities.map(speciality => (
+                                <div
+                                    className="search-doctor-result-item"
+                                    key={speciality}
+                                    onMouseDown={() => handleDoctorSelect(speciality)}
+                                >
+                                    {/* Search Icon */}
+                                    <div className="findiconimg">
+                                    <img className='findIcon' src={process.env.PUBLIC_URL + '/images/search.svg'} alt="" />
+                                    </div>
+                                    <span>{speciality}</span>
+                                </div>
+                            ))}
                         </div>
+
                     </div>
                 </div>
             </center>
@@ -87,3 +77,7 @@ function FindDoctorSearch() {
 }
 
 export default FindDoctorSearch;
+
+
+
+

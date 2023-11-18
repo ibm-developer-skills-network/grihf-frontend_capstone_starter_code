@@ -74,11 +74,17 @@ function Navbar () {
                     <i className="fa fa-times fa fa-bars"></i>
                 </div>
                 <ul className="nav__links active">
-                    <Link to="/" className="link">
+                    <Link to="/services" className="link">
                         <a>Home</a>
                     </Link>
                     <li className="link">
                         <a href="#">Appointments</a>
+                    </li>
+                    <li className="link">
+                        <a href="#">Health Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Reviews</a>
                     </li>
                     <Link to="/signup" className="link">
                         <button className="btn1">Sign Up</button>

@@ -34,7 +34,7 @@ if ( isLoggedIn) {
                       <div className="blue1 blob"></div>
                   </div>
                 <h4>
-                StayHealthy conducted an extensive survey to assess the medical facilities available in remote areas and found that several patients have a tough time finding the right doctor at the right time. The initiative from StayHealthy will help get patients access to general physicians and specialists at the right time easily.
+               Wellness is not just a destination, it's a journey of mindful choices and daily transformations. Nurture your health with love, and watch it bloom into a beacon of jey and vitality.
                 </h4>
             </div>
     
@@ -66,9 +66,9 @@ if ( isLoggedIn) {
                 <h4>
                 StayHealthy conducted an extensive survey to assess the medical facilities available in remote areas and found that several patients have a tough time finding the right doctor at the right time. The initiative from StayHealthy will help get patients access to general physicians and specialists at the right time easily.
                 </h4>
-                <a href="#services">
-                  <button className="button">Get Started</button>
-                </a>
+                <Link to="/services">
+                    <button className="button">Get Started</button>
+                </Link>
             </div>
     
           </div>

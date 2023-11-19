@@ -64,7 +64,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
       </div>
 
 
-      <div className="doctor-card-options-container">
+    <div className="doctor-card-options-container">
        <Popup
           style={{ backgroundColor: '#FFFFFF' }}
           trigger={

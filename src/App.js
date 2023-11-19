@@ -7,6 +7,7 @@ import Login from './Components/Login/Login';
 import InstantConsultation from './Components/InstantConsultationBooking/InstantConsultation';
 import BookingConsultation from './Components/BookingConsultation';
 import Home from './Components/Home/Home';
+import AppointmentForm from './Components/AppointmentForm/AppointmentForm';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/instant-consultation" element={<InstantConsultation/>}/>
           <Route path="/booking-consultation" element={<BookingConsultation/>}/>
           <Route path="/services" element={<Home/>}/>
+          <Route path="/appointment-form" element={<AppointmentForm/>}/>
           </Routes>
     </BrowserRouter>
    

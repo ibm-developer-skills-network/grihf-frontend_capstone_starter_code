@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import "./DoctorCard.css"
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 
 
@@ -48,19 +48,21 @@ function DoctorCard ({name,speciality,experience,ratings,profilePic}){
                    </div>
                    </div>
                    <div>
-                      <button className='book-appointment-btn'>                    
+                    <Link to="/appointment-form">
+                       <button className='book-appointment-btn'>                    
                        <div>Book Appointment</div>
                        <div>No Booking Fee</div>
                        </button>
-                     </div>
-                     </div>  
+                    </Link>  
+                </div>
+                </div>  
               ))}
         </div>
+        
       </div>
     </center>
     )
 }
-
 
 
 export default DoctorCard; 

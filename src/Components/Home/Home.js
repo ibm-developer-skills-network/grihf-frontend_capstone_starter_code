@@ -3,8 +3,17 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import consultationOnline from './images/consultationOnline.jpg';
+import bookingAppointment from './images/bookingAppointment.jpg';
+import healthTipsGuidance from './images/healthTipsGuidance.jpg';
+import selfCheckup from './images/selfCheckup.jpg';
 import "./Home.css"
 
+/**Image by <a href="https://fr.freepik.com/vecteurs-libre/3d-vector-illustration-dessin-anime-mignon-medecin-femme-homme-personnage-presentant-pancarte-blanche-vierge_30908216.htm#query=doctor%203d%20illustration&position=3&from_view=search&track=ais&uuid=ae758c4b-c907-43c9-b757-01c15c4fefef">Image de felicities</a> sur Freepik
+
+Image by <a href="https://www.freepik.com/free-vector/appointment-booking-with-calendar_8513821.htm#query=3d%20illustration%20booking%20an%20appointment%20doctor&position=11&from_view=search&track=ais&uuid=3bfc8ba7-b4d5-490d-8f1a-3020a4c099c0">Freepik</a>
+
+Image by <a href="https://www.freepik.com/free-vector/doctor-examining-patient-clinic-illustrated_12557504.htm#page=3&query=self%20checkup%20illustration&position=4&from_view=search&track=ais&uuid=d2083696-32dc-45ae-977c-fdb751c86dc3">Freepik</a> */
 
 function Home() {
     return (
@@ -16,20 +25,20 @@ function Home() {
             </div>
            </div>
             
-            <div className="service-box"style={{display:"flex", alignItems:"row",justifyContent:"space-between",marginTop:"100px", marginRight:"150px"}} >
+            <div className="service-box"style={{display:"flex", alignItems:"row",justifyContent:"space-between",marginTop:"100px", marginRight:"170px"}} >
                 <div >
                 </div>
                 <div >
                     <div>
-                       <Card style={{width:"140px", height:"220px"}}>
+                       <Card style={{width:"200px", height:"220px"}}>
                         <CardActionArea>
                            <CardMedia
                             component="img"
                             height="140"
-                            image=""
+                            image={consultationOnline}
                             alt=""
                         />
-                        <h1 style={{fontSize: "12px"}}>Instant Consultation</h1>
+                        <h1 style={{fontSize: "12px", marginLeft:"28px"}}>Instant Consultation</h1>
                          
                         </CardActionArea>
                         </Card>
@@ -37,15 +46,15 @@ function Home() {
                 </div>
                 <div>
                     <div>
-                       <Card style={{width:"140px", height:"220px"}}>
+                       <Card style={{width:"200px", height:"220px"}}>
                         <CardActionArea>
                            <CardMedia
                             component="img"
                             height="140"
-                            image=""
+                            image={bookingAppointment}
                             alt=""
                         />
-                        <h1 style={{fontSize: "12px"}}> Book an Appointment</h1>
+                        <h1 style={{fontSize: "12px" , marginLeft:"28px"}}> Book an Appointment</h1>
                        
                         </CardActionArea>
                         <CardActions>
@@ -56,15 +65,15 @@ function Home() {
                 </div>
                 <div>
                     <div>
-                       <Card style={{width:"140px", height:"220px"}}>
+                       <Card style={{width:"200px", height:"220px"}}>
                         <CardActionArea>
                            <CardMedia
                             component="img"
                             height="140"
-                            image=""
+                            image={selfCheckup}
                             alt=""
                         />
-                        <h1 style={{fontSize: "12px"}}>Self Checkup</h1>
+                        <h1 style={{fontSize: "12px" , marginLeft:"28px"}}>Self Checkup</h1>
                        
                         </CardActionArea>
                        
@@ -73,15 +82,15 @@ function Home() {
                 </div>
                 <div>
                     <div>
-                       <Card style={{width:"140px", height:"220px"}}>
+                       <Card style={{width:"200px", height:"220px"}}>
                         <CardActionArea>
                            <CardMedia
                             component="img"
                             height="140"
-                            image=""
+                            image={healthTipsGuidance}
                             alt=""
                         />
-                        <h1 style={{fontSize: "12px"}}> Health Tips and Guidance</h1>
+                        <h1 style={{fontSize: "12px" , marginLeft:"28px"}}> Health Tips and Guidance</h1>
                      
                         </CardActionArea>
                          </Card>

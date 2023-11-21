@@ -10,6 +10,7 @@ import Home from './Components/Home/Home';
 import AppointmentForm from './Components/AppointmentForm/AppointmentForm';
 
 function App() {
+    
   return (
     <div className="App">
     <BrowserRouter>

@@ -5,6 +5,8 @@ import DoctorCard from './DoctorCard/DoctorCard'
 
 
 function BookingConsultation () {
+    
+    
     return (
         <div>
           <FindDoctorSearch></FindDoctorSearch>

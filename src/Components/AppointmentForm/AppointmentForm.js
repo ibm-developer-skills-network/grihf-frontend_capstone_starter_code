@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { useLocation } from 'react-router-dom';
 
 
-
-const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
+const AppointmentForm = ({ onSubmit }) => {
     const [name, setName] = useState('');
+    const location = useLocation();
     const [phoneNumber, setPhoneNumber] = useState('');
     const [selectedSlot, setSelectedSlot] = useState(null);
     const [selectedDate, setSelectedDate] = useState(null);
+    const [doctorName, setDoctorName] = useState('');
+    const [doctorSpeciality, setDoctorSpeciality] = useState('')
   
 
     const timeSlots = ['9:00 AM', '10:00 AM', '11:00 AM', '2:00 PM', '3:00 PM'];
@@ -24,9 +27,9 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
       setSelectedDate(null); // Reset selectedDate after submission
       setSelectedSlot(null); // Reset selectedSlot after submission
     };
-  
+
     return (
-      <form onSubmit={handleFormSubmit} className="appointment-form" style={{marginTop:"200px"}}>
+      <form onSubmit={handleFormSubmit} className="appointment-form" >
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
@@ -69,7 +72,7 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
           ))}
         </select>
         </div>
-        <button type="submit">Book Now</button>
+        <button style={{width:"50%"}}type="submit">Book Now</button>
       </form>
     );
   };

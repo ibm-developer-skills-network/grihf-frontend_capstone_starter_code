@@ -34,6 +34,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
   };
 
   return (
+    
     <div className="doctor-card-container">
       <div className="doctor-card-details-container">
         <div className="doctor-card-details">

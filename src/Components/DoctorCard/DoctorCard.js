@@ -23,22 +23,22 @@ function DoctorCard (){
     };
     
     
-    useEffect(() => {
-        const getDoctorsDetails = async () => {
-          try {
-            const response = await fetch('https://api.npoint.io/9a5543d36f1460da2f63');
-            const data = await response.json();
+    // useEffect(() => {
+    //     const getDoctorsDetails = async () => {
+    //       try {
+    //         const response = await fetch('https://api.npoint.io/9a5543d36f1460da2f63');
+    //         const data = await response.json();
       
-            // Set the initial list of doctors and filtered doctors
-            setDoctors(data);
-            setIsSearched(false);
-          } catch (error) {
-            console.error('Error fetching data:', error);
-          }
-        };
+    //         // Set the initial list of doctors and filtered doctors
+    //         setDoctors(data);
+    //         setIsSearched(false);
+    //       } catch (error) {
+    //         console.error('Error fetching data:', error);
+    //       }
+    //     };
       
-        getDoctorsDetails();
-      }, []);
+    //     getDoctorsDetails();
+    //   }, []);
       
       
       const handleCancel = (appointmentId) => {

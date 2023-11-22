@@ -8,22 +8,26 @@ import InstantConsultation from './Components/InstantConsultationBooking/Instant
 import BookingConsultation from './Components/BookingConsultation';
 import Home from './Components/Home/Home';
 import AppointmentForm from './Components/AppointmentForm/AppointmentForm';
+import Notification from './Components/Notification/Notification';
 
 function App() {
     
   return (
     <div className="App">
     <BrowserRouter>
+    <Notification>
       <Navbar/>
           <Routes>
           <Route path="/" element={<Landing_Page/>}/>
           <Route path="/signup" element={<Sign_Up/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/instant-consultation" element={<InstantConsultation/>}/>
-          <Route path="/booking-consultation" element={<BookingConsultation/>}/>
+          {/* <Route path="/booking-consultation" element={<BookingConsultation/>}/> */}
           <Route path="/services" element={<Home/>}/>
-          <Route path="/appointment-form" element={<AppointmentForm/>}/>
+          {/* <Route path="/appointment-form" element={<AppointmentForm/>}/> */}
+          <Route path="/notification" element={<Notification/>}/>
           </Routes>
+    </Notification>  
     </BrowserRouter>
    
 </div>

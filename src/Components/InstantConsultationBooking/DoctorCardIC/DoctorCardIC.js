@@ -31,8 +31,14 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
     const updatedAppointments = [...appointments, newAppointment];
     setAppointments(updatedAppointments);
     setShowModal(false);
+
+    // Storing appointment data in localStorage
+    const doctorName = name; 
+    localStorage.setItem(doctorName, JSON.stringify(updatedAppointments));
   };
 
+  
+  
   return (
     
     <div className="doctor-card-container">

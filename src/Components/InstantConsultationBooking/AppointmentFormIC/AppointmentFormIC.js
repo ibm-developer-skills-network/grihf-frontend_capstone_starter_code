@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Notification from '../../Notification/Notification';
+
 
 const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [selectedSlot, setSelectedSlot] = useState(null);
+
+   
   
     const handleSlotSelection = (slot) => {
       setSelectedSlot(slot);
@@ -17,7 +21,8 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
     };
   
     return (
-      <form onSubmit={handleFormSubmit} className="appointment-form">
+        
+            <form onSubmit={handleFormSubmit} className="appointment-form">
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
@@ -40,6 +45,7 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
         </div>
         <button type="submit">Book Now</button>
       </form>
+      
     );
   };
 

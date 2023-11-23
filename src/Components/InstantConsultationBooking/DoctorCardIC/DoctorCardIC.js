@@ -4,7 +4,12 @@ import 'reactjs-popup/dist/index.css';
 import './DoctorCardIC.css';
 import AppointmentFormIC from '../AppointmentFormIC/AppointmentFormIC'
 import { v4 as uuidv4 } from 'uuid';
-import defaultImage from "./defaultImage.jpg"
+// import defaultImage from "./defaultImage.jpg"
+import Notification from '../../Notification/Notification';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 
 
 
@@ -49,7 +54,10 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
          <img src={profilePic} alt="Doctor Profile" className="doctor-profile-image" />
          
         ) : (
-        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
+        <svg    
+            xmlns="http://www.w3.org/2000/svg" 
+            width="46" height="46" fill="currentColor" 
+            className="bi bi-person-fill" viewBox="0 0 16 16">
         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
         </svg>
         // <img src={defaultImage} alt="Placeholder" className="doctor-profile-image-placeholder" />
@@ -93,7 +101,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
               <div>
                 <div className="doctor-card-profile-image-container">
                 {/* <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16"> <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/> </svg> */}
-                <img src={defaultImage} alt="Placeholder" className="doctor-profile-image-placeholder" />
+                {/* <img src={defaultImage} alt="Placeholder" className="doctor-profile-image-placeholder" /> */}
                 </div>
                 <div className="doctor-card-details">
                   <div className="doctor-card-detail-name">{name}</div>
@@ -106,11 +114,20 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
               {appointments.length > 0 ? (
                 <>
                   <h3 style={{ textAlign: 'center' }}>Appointment Booked!</h3>
+                 
                   {appointments.map((appointment) => (
                     <div className="bookedInfo" key={appointment.id}>
-                      <p>Name: {appointment.name}</p>
-                      <p>Phone Number: {appointment.phoneNumber}</p>
-                      <button onClick={() => handleCancel(appointment.id)}>Cancel Appointment</button>
+                     
+                     
+                      <Card style={{marginTop:"70px", marginLeft:"140px", width:"450px"}}>
+                            <CardContent>
+                            <Typography variant="h5" gutterBottom>Name: {appointment.name}</Typography>
+                            <Typography variant="h5" gutterBottom>Phone Number: +{appointment.phoneNumber}</Typography>     
+                            <Button onClick={() => handleCancel(appointment.id)} 
+                            variant="contained" color="error" style={{width:"60%",marginLeft:"100px"}}>Cancel Appointment</Button>
+                            </CardContent>
+                       </Card>
+                     
                     </div>
                   ))}
                 </>

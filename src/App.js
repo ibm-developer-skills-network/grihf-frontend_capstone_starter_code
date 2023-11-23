@@ -25,7 +25,6 @@ function App() {
           {/* <Route path="/booking-consultation" element={<BookingConsultation/>}/> */}
           <Route path="/services" element={<Home/>}/>
           {/* <Route path="/appointment-form" element={<AppointmentForm/>}/> */}
-          <Route path="/notification" element={<Notification/>}/>
           </Routes>
     </Notification>  
     </BrowserRouter>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './FindDoctorSearchIC.css';
 import { useNavigate } from 'react-router-dom';
 import { Typography } from '@mui/material';
+import doctorSearch from "../DoctorCardIC/doctorSearch.jpg"
 
 const initSpeciality = [
     'Dentist', 'Gynecologist/obstetrician', 'General Physician', 'Dermatologist', 'Ear-nose-throat (ent) Specialist', 'Homeopath', 'Ayurveda'
@@ -38,10 +39,13 @@ function FindDoctorSearchIC() {
                 <Typography style={{ fontSize: "16px" }} sx={{ fontWeight: 'bold', textTransform: 'capitalize' }}>
                     Find a doctor and Consult instantly
                 </Typography>
-                {/* Icon */}
                 <div>
-                    <i style={{ color: '#3498db', fontSize: '5rem' }} className="fa fa-user-md"></i>
+                    <img src={doctorSearch} style={{ height:"300px", width:"400px" }} />
                 </div>
+                {/* Icon */}
+                {/* <div>
+                    <i style={{ color: '#3498db', fontSize: '5rem' }} className="fa fa-user-md"></i>
+                </div> */}
                 {/* Search Container */}
                 <div className="home-search-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <div className="doctor-search-box">

@@ -47,6 +47,9 @@ function Navbar () {
                     <Link to="/instant-consultation" className="link">
                         <a>Booking</a>
                     </Link>
+                    <Link to="/reviews">
+                       <Typography>Reviews</Typography>
+                    </Link>
                     <Typography>Welcome, {isUser && <span>{extractedName}</span>}</Typography>
                     <li className="link">
                         <Button onClick={handleLogout} variant="outlined" color="error">

@@ -9,6 +9,7 @@ import BookingConsultation from './Components/BookingConsultation';
 import Home from './Components/Home/Home';
 import AppointmentForm from './Components/AppointmentForm/AppointmentForm';
 import Notification from './Components/Notification/Notification';
+import ReviewForm from './Components/ReviewForm/ReviewForm';
 
 function App() {
     
@@ -25,6 +26,7 @@ function App() {
           {/* <Route path="/booking-consultation" element={<BookingConsultation/>}/> */}
           <Route path="/services" element={<Home/>}/>
           {/* <Route path="/appointment-form" element={<AppointmentForm/>}/> */}
+          <Route path="/reviews" element={<ReviewForm/>}/>
           </Routes>
     </Notification>  
     </BrowserRouter>

@@ -9,8 +9,8 @@ function BookingConsultation () {
     
     return (
         <div>
-          <FindDoctorSearch></FindDoctorSearch>
-          <DoctorCard></DoctorCard>
+           {/* <FindDoctorSearch></FindDoctorSearch>  */}
+          <DoctorCard ></DoctorCard>
         </div>
     )
 }

@@ -7,6 +7,7 @@ import TableBody from "@mui/material/TableBody";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import Button from '@mui/material/Button';
+import GiveReviews from "./GiveReviews";
 
 
 
@@ -66,8 +67,7 @@ function ReviewForm() {
             <TableRow key={doctor.name}>
               <TableCell>{doctor.name}</TableCell>
               <TableCell></TableCell>
-              <TableCell><Button variant="contained" style={{width:"50%", marginLeft:"10px"}}>Click Here</Button></TableCell>
-              <TableCell></TableCell>
+               <TableCell><GiveReviews></GiveReviews></TableCell>
             </TableRow>
           ))}
         </TableBody>

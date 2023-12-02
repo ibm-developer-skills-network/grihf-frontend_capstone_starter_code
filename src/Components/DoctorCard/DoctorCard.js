@@ -5,12 +5,7 @@ import AppointmentForm from "../AppointmentForm/AppointmentForm";
 import { v4 as uuidv4 } from 'uuid';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import { useEffect, useState } from "react"
 import "./DoctorCard.css"
-import { Link, useSearchParams } from "react-router-dom";
-import AppointmentForm from "../AppointmentForm/AppointmentForm";
-import { v4 as uuidv4 } from 'uuid';
-import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
 

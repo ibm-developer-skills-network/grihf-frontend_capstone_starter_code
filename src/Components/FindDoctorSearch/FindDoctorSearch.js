@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './FindDoctorSearch.css';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import Avatar from '@mui/material/Avatar';
+import SearchIcon from '@mui/icons-material/Search';
 import { Typography } from '@mui/material';
 
 const initSpeciality = [
@@ -54,10 +56,11 @@ function FindDoctorSearch() {
                             onFocus={() => setDoctorResultHidden(false)}
                             onBlur={() => setDoctorResultHidden(true)}
                         />
-                        {/* Search Button */}
-                         <button className="search-button" onClick={handleSearchButtonClick}>
-                        Search
-                        </button>
+                        {/* Search Icon */}
+                         <Avatar  variant="square" >
+                         <SearchIcon  onClick={handleSearchButtonClick} sx={{ fontSize: 40 }}>
+                        </SearchIcon >
+                         </Avatar>
                         {/* Search Results */}
                         <div className="search-doctor-input-results" hidden={doctorResultHidden}>
                             {/* Display filtered specialties */}
@@ -76,7 +79,7 @@ function FindDoctorSearch() {
                             ))}
                         </div>
 
-                    </div>
+                    </div>!
                 </div>
             </center>
         </div>

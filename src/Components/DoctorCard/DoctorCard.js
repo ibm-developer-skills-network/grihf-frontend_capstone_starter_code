@@ -50,22 +50,13 @@ function DoctorCard ({name, speciality, experience, ratings}){
         setAppointments(updatedAppointments);
         setShowModal(false);
       };
-    
-    // const displayDoctors = isSearched ? filteredDoctors : doctors;
+
 
     return (
     <div  >
-    <center>
-        {/* <div style={{marginTop:"200px" ,width:"50%"}}>
-            <h1>Search doctor by speciality</h1>
-            <input
-              type="text"
-              className="search-doctor-input-box"
-              placeholder="Search doctors by specialty..."/>
-              <button>click here</button>
-        </div> */}
-      <div className="searchpage-container" style={{marginTop:"250px"}}>
-        <div className="search-results-container">
+    
+      <div className="searchpage-container" style={{marginTop:"50px"}}>
+        <div className="search-results-container" style={{display:"flex",alignItem:"row"}}>
                 <div className="doctor-card-container">
                    <div className="doctor-card-details-container">
                    <div className="doctor-card-details">
@@ -79,7 +70,7 @@ function DoctorCard ({name, speciality, experience, ratings}){
     </div>           
     </div> 
     </div>
-    </center>
+    
     </div>
     
     )

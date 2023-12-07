@@ -3,6 +3,11 @@ import {Link, useNavigate} from "react-router-dom"
 import "./Navbar.css"
 import Button from '@mui/material/Button';
 import { Typography } from "@mui/material";
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Fade from '@mui/material/Fade';
+
+
 function Navbar () {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
    
@@ -17,6 +22,14 @@ function Navbar () {
         sessionStorage.clear();
         navigate("/login");
     }
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
     const userName = sessionStorage.getItem("email");
     const extractedName = userName ? userName.split('@')[0] : '';
     const isUser = userName !== null;
@@ -50,7 +63,32 @@ function Navbar () {
                     <Link to="/reviews">
                        <Typography>Reviews</Typography>
                     </Link>
+                    <div>
+                    <Button
+                        id="fade-button"
+                        aria-controls={open ? 'fade-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        onClick={handleClick}
+                    >
                     <Typography>Welcome, {isUser && <span>{extractedName}</span>}</Typography>
+                    </Button>
+                    <Menu
+                        id="fade-menu"
+                        MenuListProps={{
+                        'aria-labelledby': 'fade-button',
+                        }}
+                        anchorEl={anchorEl}
+                        open={open}
+                        onClose={handleClose}
+                        TransitionComponent={Fade}
+                    >
+                    <MenuItem onClick={handleClose}><Typography>Welcome, {isUser && <span>{extractedName}</span>}</Typography></MenuItem>
+                    <Link to="/user-profil"><MenuItem onClick={handleClose}>Profil</MenuItem></Link>
+                    <MenuItem onClick={handleClose}>Reports</MenuItem>
+                    </Menu>
+                </div>
+                    
                     <li className="link">
                         <Button onClick={handleLogout} variant="outlined" color="error">
                             Logout

@@ -10,6 +10,7 @@ import Home from './Components/Home/Home';
 import AppointmentForm from './Components/AppointmentForm/AppointmentForm';
 import Notification from './Components/Notification/Notification';
 import ReviewForm from './Components/ReviewForm/ReviewForm';
+import ProfilCard from './Components/ProfileCard/ProfileCard';
 
 function App() {
     
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Landing_Page/>}/>
           <Route path="/signup" element={<Sign_Up/>}/>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/user-profil" element={<ProfilCard/>}/>
           <Route path="/services" element={<Home/>}/>
           <Route path="/instant-consultation" element={<InstantConsultation/>}/>
           <Route path="/booking-consultation" element={<BookingConsultation/>}/> 
@@ -34,5 +36,6 @@ function App() {
 </div>
   );
 }
+
 
 export default App;

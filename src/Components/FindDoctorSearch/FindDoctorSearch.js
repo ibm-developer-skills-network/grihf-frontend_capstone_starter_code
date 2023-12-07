@@ -20,8 +20,11 @@ function FindDoctorSearch() {
     const handleDoctorSelect = (speciality) => {
         setSearchDoctor(speciality); // Update the searchDoctor state with the selected specialty
         setDoctorResultHidden(true); // Hide the search results
-        navigate(`/instant-consultation?speciality=${speciality}`);
+        navigate(`/booking-consultation?speciality=${speciality}`);
     };
+    const handleSearchButtonClick = () => {
+    navigate(`/booking-consultation?speciality=${searchDoctor}`);
+  };
 
     // Function to handle changes in the search input
     const handleSearchInputChange = (text) => {
@@ -51,6 +54,10 @@ function FindDoctorSearch() {
                             onFocus={() => setDoctorResultHidden(false)}
                             onBlur={() => setDoctorResultHidden(true)}
                         />
+                        {/* Search Button */}
+                         <button className="search-button" onClick={handleSearchButtonClick}>
+                        Search
+                        </button>
                         {/* Search Results */}
                         <div className="search-doctor-input-results" hidden={doctorResultHidden}>
                             {/* Display filtered specialties */}

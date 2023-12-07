@@ -70,7 +70,7 @@ function InstantConsultation () {
                     {filteredDoctors.length > 0 ? (
                     filteredDoctors.map(doctor => <div key={doctor.name}>
                         <DoctorCardIC className="doctorcard" {...doctor} />
-                        <DoctorCard {...doctor} />
+                        
                       </div>)
                 
                     ) : (

@@ -76,7 +76,7 @@ function DoctorCard ({name, speciality, experience, ratings}){
        <Popup
           style={{ backgroundColor: '#FFFFFF' }}
           trigger={
-            <button className={`book-appointment-btn ${appointments.length > 0 ? 'cancel-appointment' : ''}`} style={{width:"25%",marginRight:"70%"}}>
+            <button className={`book-appointment-btn ${appointments.length > 0 ? 'cancel-appointment' : ''}`} style={{width:"70%",height:"50%"}}>
               {appointments.length > 0 ? (
                 <div>Cancel Appointment</div>
               ) : (

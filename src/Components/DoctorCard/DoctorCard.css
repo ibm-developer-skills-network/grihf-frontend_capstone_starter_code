@@ -71,6 +71,7 @@
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    width: 70%;
   }
   
   .book-appoinment-btn div:nth-child(2) {

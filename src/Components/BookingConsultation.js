@@ -49,18 +49,19 @@ function BookingConsultation() {
     <div>
       <center>
         <div className="searchpage-container">
+        <centre><h2>Find a doctor at your own ease</h2></centre>
           <FindDoctorSearch onSearch={handleSearch} />
           <div className="search-results-container">
             {isSearched ? (
-              <center>
-                <h2>
+              <div>
+                <centre><h2>
                   {filteredDoctors.length} doctors are available{' '}
                   {searchParams.get('location')}
-                </h2>
-                <h3>
+                </h2></centre>
+                <centre><h3>
                   Book appointments with minimum wait-time & verified doctor
                   details
-                </h3>
+                </h3></centre>
                 {filteredDoctors.length > 0 ? (
                   filteredDoctors.map((doctor) => (
                     <div key={doctor.name}>
@@ -70,10 +71,9 @@ function BookingConsultation() {
                 ) : (
                   <p>No doctors found.</p>
                 )}
-              </center>
+              </div>
             ) : (
-              <center>
-                <h2>List of Doctor Specialities</h2>
+              <div style={{display:"flex",flexWrap:"wrap",justifyContent:"space-between", paddingTop:"10px"}}>
                 {doctors.length > 0 ? (
                   doctors.map((doctor) => (
                     <div key={doctor.name}>
@@ -83,7 +83,7 @@ function BookingConsultation() {
                 ) : (
                   <p>No doctors available.</p>
                 )}
-              </center>
+              </div>
             )}
           </div>
         </div>

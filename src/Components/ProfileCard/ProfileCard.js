@@ -3,6 +3,12 @@ import { API_URL } from "../../config";
 import { useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
 import PersonIcon from '@mui/icons-material/Person';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+
 
 function ProfilCard() {
   const [userDetails, setUserDetails] = useState({});
@@ -101,7 +107,7 @@ const handleSubmit = async (e) => {
 };
 
 return (
-<div className="profile-container" style={{marginTop:"200px", width:"30%",marginLeft:"50px"}}>
+<div className="profile-container" style={{marginTop:"100px", width:"30%",marginLeft:"250px"}}>
   {editMode ? (
 <form onSubmit={handleSubmit}>
 <label>
@@ -114,12 +120,30 @@ return (
   />
 </label>
 <label>
-         Name
+         First Name
          <input
            type="text"
            name="name"
            value={updatedDetails.name}
            onChange={handleInputChange}
+         />
+       </label>
+       <label>
+         Last Name
+         <input
+           type="text"
+           name="last_name"
+        //    value={updatedDetails.}
+        //    onChange={handleInputChange}
+         />
+       </label>
+       <label>
+         Age
+         <input
+           type="number"
+           name="age"
+        //    value={updatedDetails.}
+        //    onChange={handleInputChange}
          />
        </label>
        <label>
@@ -131,6 +155,29 @@ return (
            onChange={handleInputChange}
          />
        </label>
+       <label>
+         Country
+         <input
+           type="text"
+           name="country"
+        //    value={updatedDetails.}
+        //    onChange={handleInputChange}
+         />
+       </label>
+    <FormControl>
+      <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
+      <RadioGroup
+        aria-labelledby="demo-radio-buttons-group-label"
+        defaultValue="Male"
+        name="radio-buttons-group"
+      >
+        <FormControlLabel value="female" control={<Radio />} label="Male" />
+        <FormControlLabel value="male" control={<Radio />} label="Female" />
+      </RadioGroup>
+    </FormControl>
+    
+
+       
 <Button variant="contained" type="submit" style={{width:"30%",marginLeft:"100px",marginTop:"30px"}}>Save</Button>
 </form>
 ) : (

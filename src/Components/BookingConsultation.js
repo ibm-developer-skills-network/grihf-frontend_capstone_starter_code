@@ -49,7 +49,7 @@ function BookingConsultation() {
   return (
     <div>
       <center>
-        <div className="searchpage-container">
+        <div className="searchpage-container" style={{marginTop:"10px"}}>
         <centre><h2>Find a doctor at your own ease</h2></centre>
           <FindDoctorSearch onSearch={handleSearch} />
           <div className="search-results-container">

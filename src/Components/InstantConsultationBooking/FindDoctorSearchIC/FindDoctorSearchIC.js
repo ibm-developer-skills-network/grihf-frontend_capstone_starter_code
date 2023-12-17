@@ -61,7 +61,7 @@ function FindDoctorSearchIC() {
                         />
                        
                         {/* Search Results */}
-                        <div className="search-doctor-input-results" hidden={doctorResultHidden} >
+                        <div className="search-doctor-input-results" hidden={doctorResultHidden}>
                             {/* Display filtered specialties */}
                             {filteredSpecialities.map(speciality => (
                                 <div

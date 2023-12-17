@@ -44,7 +44,7 @@ function FindDoctorSearch() {
         <div className='finddoctor'>
             <center>
                 {/* Search Container */}
-                <div className="home-search-container" style={{ marginTop: '2px' ,marginLeft:"30%"}}>
+                <div className="home-search-container" style={{ marginTop: '50px' ,marginLeft:"30%"}}>
                     <div className="doctor-search-box">
                         {/* Search Input */}
                         <input

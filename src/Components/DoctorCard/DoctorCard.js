@@ -16,20 +16,20 @@ import CardContent from '@mui/material/CardContent';
 
 function DoctorCard ({name, speciality, experience, ratings}){
 
-    const [doctors, setDoctors] = useState([]);
+    // const [doctors, setDoctors] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [appointments, setAppointments] = useState([]);
-    const [searchParams] = useSearchParams();
-    const [filteredDoctors, setFilteredDoctors] = useState(false);
-    const [isSearched, setIsSearched] = useState(false);
+    // const [searchParams] = useSearchParams();
+    // const [filteredDoctors, setFilteredDoctors] = useState(false);
+    // const [isSearched, setIsSearched] = useState(false);
     
     const [showAppointmentForm, setShowAppointmentForm] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
 
 
-    const handleShowAppointmentForm = () => {
-      setShowAppointmentForm(true);
-    };
+    // const handleShowAppointmentForm = () => {
+    //   setShowAppointmentForm(true);
+    // };
     
     const storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
     if (!storedDoctorData || !Array.isArray(storedDoctorData)) {
@@ -60,7 +60,7 @@ function DoctorCard ({name, speciality, experience, ratings}){
     <div>
         <div className="searchpage-container" style={{marginTop:"50px"}}>
             <div className="search-results-container" >
-                <div className="doctor-card-container" style={{display:"flex",alignItem:"row"}}>
+                <div className="doctor-card-container">
                    <div className="doctor-card-details-container">
                         <div className="doctor-card-details">
                             <div className="doctor-card-detail-name">{name}</div>
@@ -72,11 +72,12 @@ function DoctorCard ({name, speciality, experience, ratings}){
                 </div>       
             </div>           
         </div> 
-        <div className="doctor-card-options-container">
+        <div className="doctor-card-options-container" >
        <Popup
-          style={{ backgroundColor: '#FFFFFF' }}
+          style={{ backgroundColor: '#FFFFFF'}}
           trigger={
-            <button className={`book-appointment-btn ${appointments.length > 0 ? 'cancel-appointment' : ''}`} style={{width:"70%",height:"50%"}}>
+            <div style={{height:"50%",width:"60%"}}>
+                <button className={`book-appointment-btn ${appointments.length > 0 ? 'cancel-appointment' : ''}`}>
               {appointments.length > 0 ? (
                 <div>Cancel Appointment</div>
               ) : (
@@ -84,6 +85,7 @@ function DoctorCard ({name, speciality, experience, ratings}){
               )}
               <div>No Booking Fee</div>
             </button>
+            </div>
           }
           modal
           open={showModal}

@@ -58,6 +58,7 @@ const Sign_Up = () => {
             } else {
                 errorMessage = json.error || 'Unknown error occurred';
             }
+            console.log(errorMessage);
             setShowerr(errorMessage);
         }
     } catch (error) {

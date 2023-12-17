@@ -13,10 +13,10 @@ function FindDoctorSearch() {
     const [doctorResultHidden, setDoctorResultHidden] = useState(true);
     const [searchDoctor, setSearchDoctor] = useState('');
     const [specialities, setSpecialities] = useState(initSpeciality);
-    const [doctors, setDoctors] = useState([]);
-    const [filteredDoctors, setFilteredDoctors] = useState([]);
-    const [isSearched, setIsSearched] = useState(false);
-    const [searchParams] = useSearchParams();
+    // const [doctors, setDoctors] = useState([]);
+    // const [filteredDoctors, setFilteredDoctors] = useState([]);
+    // const [isSearched, setIsSearched] = useState(false);
+    // const [searchParams] = useSearchParams();
     const navigate = useNavigate();
     // Function to handle the selection of a specific specialty
     const handleDoctorSelect = (speciality) => {
@@ -62,13 +62,14 @@ function FindDoctorSearch() {
                         </SearchIcon >
                          </Avatar>
                         {/* Search Results */}
-                        <div className="search-doctor-input-results" hidden={doctorResultHidden}>
+                        <div className="search-doctor-input-results" hidden={doctorResultHidden} > 
                             {/* Display filtered specialties */}
                             {filteredSpecialities.map(speciality => (
                                 <div
                                     className="search-doctor-result-item"
                                     key={speciality}
                                     onMouseDown={() => handleDoctorSelect(speciality)}
+                                    style={{display:"flex",flexWrap:"wrap",justifyContent:"space-between"}}
                                 >
                                     {/* Search Icon */}
                                     <div className="findiconimg">

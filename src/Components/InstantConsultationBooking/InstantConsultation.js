@@ -10,9 +10,14 @@ function InstantConsultation () {
     const [doctors, setDoctors] = useState([]);
     const [filteredDoctors, setFilteredDoctors] = useState([]);
     const [isSearched, setIsSearched] = useState(false);
+
+
+    const saveDoctorDataToLocalStorage = (data) => {
+        localStorage.setItem('doctorData', JSON.stringify(data));
+      };
     
     const getDoctorsDetails = () => {
-        fetch('https://api.npoint.io/9a5543d36f1460da2f63')
+        fetch('https://api.npoint.io/9a5543d36 f1460da2f63')
         .then(res => res.json())
         .then(data => {
             if (searchParams.get('speciality')) {
@@ -28,6 +33,8 @@ function InstantConsultation () {
                 setIsSearched(false);
             }
             setDoctors(data);
+            // Save data to localStorage once fetched
+            saveDoctorDataToLocalStorage(data);
         })
         .catch(err => console.log(err));
     }
@@ -62,7 +69,7 @@ function InstantConsultation () {
         <center>
             <div  className="searchpage-container">
             <FindDoctorSearchIC onSearch={handleSearch} />
-            <div className="search-results-container">
+            <div className="search-results-container" >
             {isSearched ? (
                 <center>
                     <h2>{filteredDoctors.length} doctors are available {searchParams.get('location')}</h2>

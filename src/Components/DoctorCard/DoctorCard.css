@@ -9,61 +9,61 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
   }
-  .cancel-appointment {
+.cancel-appointment {
     background-color: red;
   }
   
-  .doctor-card-details-container {
+.doctor-card-details-container {
     padding: 10px;
    display: flex;
    flex-direction: row-reverse;
   }
   
-  .doctor-card-profile-image-container {
+.doctor-card-profile-image-container {
     text-align: center;
     margin-bottom: 10px;
   }
   
-  .doctor-card-profile-image-container img {
+.doctor-card-profile-image-container img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
   }
   
-  .doctor-card-details {
+.doctor-card-details {
     text-align: center;
   }
   
-  .doctor-card-detail-name {
+.doctor-card-detail-name {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
   }
   
-  .doctor-card-detail-speciality {
+.doctor-card-detail-speciality {
     font-size: 16px;
     margin-bottom: 5px;
   }
   
-  .doctor-card-detail-experience {
+.doctor-card-detail-experience {
     font-size: 14px;
     color: #888;
     margin-bottom: 5px;
     font-weight: bold;
   }
   
-  .doctor-card-detail-location,
-  .doctor-card-detail-clinic,
-  .doctor-card-detail-consultationfees {
+.doctor-card-detail-location,
+.doctor-card-detail-clinic,
+.doctor-card-detail-consultationfees {
     font-size: 14px;
     margin-bottom: 5px;
   }
-  .doctor-card-detail-consultationfees{
+.doctor-card-detail-consultationfees{
     font-weight: bold;
     
   }
   
-  .book-appoinment-btn {
+.book-appoinment-btn {
     background-color: #3498db;
     color: #fff;
     border: none;
@@ -71,14 +71,15 @@
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    width: 70%;
+   
   }
   
-  .book-appoinment-btn div:nth-child(2) {
+.book-appoinment-btn div:nth-child(2) {
     font-size: 12px;
     font-weight: bold;
+    width: 30%;
   }
-  .modal-container {
+.modal-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -117,6 +118,8 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
+
 .doctorbg{
   -webkit-scrollbar {
     display: none;
@@ -193,3 +196,4 @@ button:hover {
   cursor: pointer;
   /* color: rgb(249, 60, 60); */
 }
+

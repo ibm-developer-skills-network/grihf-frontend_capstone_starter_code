@@ -23,8 +23,8 @@ function App() {
           <Route path="/" element={<Landing_Page/>}/>
           <Route path="/signup" element={<Sign_Up/>}/>
           <Route path="/login" element={<Login/>}/>
-          <Route path="/user-profil" element={<ProfilCard/>}/>
           <Route path="/services" element={<Home/>}/>
+          <Route path="/user-profil" element={<ProfilCard/>}/>
           <Route path="/instant-consultation" element={<InstantConsultation/>}/>
           <Route path="/booking-consultation" element={<BookingConsultation/>}/> 
           {/* <Route path="/appointment-form" element={<AppointmentForm/>}/> */}

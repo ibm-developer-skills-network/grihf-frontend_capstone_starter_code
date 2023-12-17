@@ -7,6 +7,7 @@ function GiveReviews({doctor}) {
   const [showForm, setShowForm] = useState(false);
   const [submittedMessage, setSubmittedMessage] = useState('');
   const [showWarning, setShowWarning] = useState(false);
+  const [displayButton, setDisplayButton] = useState(true)
   const [formData, setFormData] = useState({
         name: '',
         review: '',
@@ -14,27 +15,34 @@ function GiveReviews({doctor}) {
       });
   const handleButtonClick = () => {
     setShowForm(true);
+    setDisplayButton(false);
   };
 
   const handleChange = (e) => {
     setFormData(e.target.value);
   };
   
-
+  const handleClose = () => {
+    setShowForm(false);
+    setDisplayButton(true);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmittedMessage(formData);
     setFormData('');
         if (formData.name && formData.review && formData.rating > 0) {
           setShowWarning(false);
+          setSubmittedMessage(formData.review);
+          setShowForm(false);
+          setDisplayButton(false);
         } else {
           setShowWarning(true);
         }
   };
   return (
     <div>
-      {!showForm ? (
-        <button onClick={handleButtonClick} style={{width:"50%"}}>Click Here</button>
+      {displayButton && !showForm ? (
+        <Button onClick={handleButtonClick} varianr="outlined">Click Here</Button>
       ) : (
      
         <form onSubmit={handleSubmit}>
@@ -49,6 +57,7 @@ function GiveReviews({doctor}) {
                   <textarea id="review" name="review" value={formData.review} onChange={handleChange} />
                  </div>
                  <button type="submit" style={{width:"50%"}}>Submit</button>
+                 <button onClick={handleClose} style={{ width: "50%", marginLeft: "10px" }}>Close</button>
                </form>
         
       )}

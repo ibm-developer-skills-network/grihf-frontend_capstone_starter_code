@@ -11,6 +11,7 @@ function BookingConsultation() {
 
   useEffect(() => {
     const storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
+    // console.log(storedDoctorData);
     if (storedDoctorData && Array.isArray(storedDoctorData)) {
       setDoctors(storedDoctorData);
     }

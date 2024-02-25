@@ -8,36 +8,73 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
-    <link rel="stylesheet" href="./LandingPage.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <section class="hero-section">
-        <div>
-          <div data-aos="fade-up" class="flex-hero">
-              
-              <h1>
-                Your Health<br/>
-                <span class="text-gradient">
-                  
-                  Our Responsibility
-                </span>
-              </h1>
-                <div class="blob-cont">
-                    <div class="blue blob"></div>
-                </div>
-                <div class="blob-cont">
-                    <div class="blue1 blob"></div>
-                </div>
-              <h4>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque at quae ducimus. Suscipit omnis quibusdam non cum rem voluptatem! 
-              </h4>
-              <a href="#services">
-                <button class="button">Get Started</button>
-              </a>
-                
-          </div>
-  
-        </div>
+  <header>
+    <div class="flexbox width1400 padding20 center between">
+      <div class="logo"><img src="./img/logo.svg"></div>
+      <section id="navigation" class="flexbox">
+        <ul>
+          <li><a href="landingpage.html#home">Home</a></li>
+          <li><a href="landingpage.html#appointments">Appointments</a></li>
+          <li><a href="landingpage.html#health-blog">Health Blog</a></li>
+          <li><a href="landingpage.html#reviews">Reviews</a></li>
+          <li><a href="signup.html" class="button">Sign up</a></li>
+          <li><a href="login.html" class="button m-l-n30">Login</a></li>
+        </ul>
       </section>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="flexbox flex-column width800 padding20 flex-center vh90">
+      <h1>Your health <br /><span class="subline">our responsibility</span></h1>
+      <p class="padding20 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus.</p>
+      <button class="button blue width50">Get started</button>
+      <div class="padding60"></div>
+    </div>
+  </section>
+
+  <section id="appointments">
+    <div class="flexbox flex-column width800 padding20">
+      <h2>Find a doctor <br />at your own ease</h2>
+
+      <h3>8 doctors available in </h3>
+      <p>Book appointments with minimun wait-time & verified doctor details</p>
+    </div>
+    <div class="flexbox flex-row width1400 padding20 center">
+      <div class="dr-card">
+        <img src="./img/doctor1.png" alt="Dr. Denis Rag" />
+        <h4 class="dr-name">Dr. Denis Rag</h4>
+        <p class="speciality">Dentist</p>
+        <p class="experience">9 years experience</p>
+        <p class="rating">Ratings: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+        <button class="button blue width100">Book Appointment <br /><span class="fee">No Booking Fee</span></button>
+      </div>
+      <div class="dr-card">
+        <img src="./img/doctor2.png" alt="Dr. Jiao Yang" />
+        <h4 class="dr-name">Dr. Jiao Yang</h4>
+        <p class="speciality">Dentist</p>
+        <p class="experience">24 years experience</p>
+        <p class="rating">Ratings: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+        <button class="button blue width100">Book Appointment <br /><span class="fee">No Booking Fee</span></button>
+      </div>
+      <div class="dr-card">
+        <img src="./img/doctor3.png" alt="Dr. Lyn Christie" />
+        <h4 class="dr-name">Dr. Lyn Christie</h4>
+        <p class="speciality">Dentist</p>
+        <p class="experience">11 years experience</p>
+        <p class="rating">Ratings: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+        <button class="button blue width100">Book Appointment <br /><span class="fee">No Booking Fee</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="flexbox flex-column width800 padding20">
+      <h2>Reviews</h2>
+    </div>
+  </section>
 </body>
 </html>

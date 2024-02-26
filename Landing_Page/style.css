@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #2CAEE2;
+    --primary-color-light: #CAEBF8;
     --secondary-color: #DC3635;
     --text-color: #3C3D41;
     --border-color: #D3DDE2;
@@ -85,6 +86,7 @@ button {
 fieldset {
     border: 0px;
     position: relative;
+    width: 100%;
 }
 input {
     padding: 15px 20px;
@@ -110,6 +112,77 @@ span.icon-arrowdown {
     top: 30px;
     padding: 15px 15px;
     cursor: pointer;
+}
+.field-icon {
+    margin-left: 25px;
+}
+#search-doctor .tablink {
+    border: none;
+    outline: none;
+    width: 140px;
+    padding: 10px 15px;
+    margin: 0;
+    margin-left: -5px;
+    background-color: var(--primary-color-light);
+    color: var(--text-color);
+    position: relative;
+    z-index: 1;
+}
+#search-doctor .active {
+    border: 1px solid var(--primary-color);
+    border-bottom: none;
+    outline: none;
+    width: 140px;
+    padding: 10px 15px;
+    margin: 0;
+    background-color: #fff;
+    color: var(--text-color);
+    position: relative;
+    z-index: 2;
+}
+#search-doctor .tablink img {
+    padding-right: 15px;
+}
+#search-doctor fieldset {
+    border: 1px solid var(--primary-color);
+    outline: none;
+    margin-top: -1px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#search-doctor input {
+    padding-left: 25px;
+    font-style: italic;
+    margin: 0;
+    width: 400px;
+    background-color: transparent;
+    border: 0;
+}
+#search-doctor .input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+#search-doctor .input-container:after {
+    content:""; 
+    background: var(--primary-color); 
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    height: 50%; 
+    top: 25%;
+    width: 1px;
+    display: block;
+}
+#search-doctor button {
+    width: 20%;
+    margin: 0 -5px 0 0;
 }
 
 * {
@@ -356,22 +429,58 @@ li {
     cursor: pointer;
 }
 
-/* Blob */
+/* Table */
+.table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--border-color);
+  }
+
+  .row {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .header {
+    background-color: var(--primary-color-light);
+    color: var(--text-color);
+  }
+  .cell {
+    display: flex;
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    flex: 1;
+    padding: 4px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+  }
+
+  .cell button {
+    margin: 0;
+  }
+
+  .cell:last-child {
+    border-right: none;
+  }
 
 
-/* Blobs */
-.flex-hero .blob-cont {
-    justify-content: center;
-    align-items: center;
-    position: static;
-    margin: 10px;
-}
 
+  /* Remove top border from the first row */
+  .row:first-child {
+    border-top: none;
+  }
 
-.blob {
-    border-radius: 100px;
-    filter: blur(60px);
-}
+  /* Remove side borders from the header cells */
+  .header .cell {
+    border-right: none;
+  }
+
+  /* Remove side borders from the cells in the last column */
+  .row .cell:last-child {
+    border-right: none;
+  }
+
 /*
 .blue {
     background-color: #2937a392;

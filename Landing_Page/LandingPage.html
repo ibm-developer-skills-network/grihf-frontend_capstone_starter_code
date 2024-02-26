@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
     <link rel="stylesheet" href="./style.css">
+    <script src="script.js" defer="defer"></script>
 </head>
 <body>
   <header>
@@ -37,8 +38,32 @@
   </section>
 
   <section id="appointments">
-    <div class="flexbox flex-column width800 padding20">
+    <div class="flexbox flex-column width1000 padding20">
       <h2>Find a doctor <br />at your own ease</h2>
+      <div class="width100 padding20">
+        <div id="search-doctor" class="choice">
+          <button class="tablink active" onclick="openSearch(event, 'Locally')"><img src="./img/locally.svg" />Locally</button>
+          <button class="tablink" onclick="openSearch(event, 'Virtual')"><img src="./img/virtual.svg" />Virtual</button>
+          <fieldset id="locally" class="search-doctor">
+            <div class="input-container">
+              <img src="./img/magnifying.svg" class="field-icon" />
+              <input type="text" placeholder="Name, Speciality or Institution" class="line-after"/>
+            </div>
+            <img src="./img/location.svg" class="field-icon" />
+            <input type="text" placeholder="Where? (City, Zipcode or Address)" />
+            <button class="button blue">Search</button>
+          </fieldset>
+          <fieldset id="virtual" class="search-doctor" style="display:none">
+            <div class="input-container">
+              <img src="./img/magnifying.svg" class="field-icon" />
+              <input type="text" placeholder="Name, Speciality or Institution" class="line-after"/>
+            </div>
+            <img src="./img/location.svg" class="field-icon" />
+            <input type="text" placeholder="Where? (City, Zipcode or Address)" />
+            <button class="button blue">Search</button>
+          </fieldset>
+        </div>
+      </div>
 
       <h3>8 doctors available in </h3>
       <p>Book appointments with minimun wait-time & verified doctor details</p>
@@ -72,9 +97,41 @@
   </section>
 
   <section id="reviews">
-    <div class="flexbox flex-column width800 padding20">
+    <div class="flexbox flex-column width1400 padding20">
       <h2>Reviews</h2>
+
+      <div class="table">
+        <div class="row header">
+          <div class="cell">S.No.</div>
+          <div class="cell">Doctor Name</div>
+          <div class="cell">Doctor Specialty</div>
+          <div class="cell">Provide Review</div>
+          <div class="cell">Review Given</div>
+        </div>
+        <div class="row">
+          <div class="cell">1</div>
+          <div class="cell">Dr. John Doe</div>
+          <div class="cell">Cardiology</div>
+          <div class="cell"><button class="blue">Give Review</button></div>
+          <div class="cell"></div>
+        </div>
+        <div class="row">
+          <div class="cell">2</div>
+          <div class="cell">Dr. Denis Raj</div>
+          <div class="cell">Dentist</div>
+          <div class="cell"><button class="blue">Give Review</button></div>
+          <div class="cell"></div>
+        </div>
+        <div class="row">
+          <div class="cell">3</div>
+          <div class="cell">Dr. Jane Doe</div>
+          <div class="cell">Internist</div>
+          <div class="cell"><button class="blue">Give Review</button></div>
+          <div class="cell"></div>
+        </div>
+      </div>
     </div>
+    <div class="padding60"></div>
   </section>
 </body>
 </html>

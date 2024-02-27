@@ -97,7 +97,7 @@ input {
 }
 span.icon-eye {
     content:"";
-    background: url("./img/invisible.svg") no-repeat;
+    background: url("./assets/invisible.svg") no-repeat;
     position: absolute;
     right: 0;
     top: 25px;
@@ -106,7 +106,7 @@ span.icon-eye {
 }
 span.icon-arrowdown {
     content:"";
-    background: url("./img/dropdown.svg") no-repeat;
+    background: url("./assets/dropdown.svg") no-repeat;
     position: absolute;
     right: 0;
     top: 30px;
@@ -301,7 +301,7 @@ header {
     font-weight: 700;
 }
 #hero {
-    background-image: url("./img/hero-background.png");
+    background-image: url("./assets/hero-background.png");
     background-repeat: no-repeat;
     background-size: cover;
 }

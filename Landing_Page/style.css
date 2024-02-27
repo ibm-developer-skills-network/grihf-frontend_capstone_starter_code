@@ -116,28 +116,26 @@ span.icon-arrowdown {
 .field-icon {
     margin-left: 25px;
 }
-#search-doctor .tablink {
-    border: none;
-    outline: none;
-    width: 140px;
-    padding: 10px 15px;
-    margin: 0;
-    margin-left: -5px;
-    background-color: var(--primary-color-light);
-    color: var(--text-color);
-    position: relative;
-    z-index: 1;
+.no-space {
+    margin-left: -6px!important;
 }
-#search-doctor .active {
-    border: 1px solid var(--primary-color);
+#search-doctor .tablink {
     border-bottom: none;
     outline: none;
     width: 140px;
     padding: 10px 15px;
     margin: 0;
-    background-color: #fff;
     color: var(--text-color);
     position: relative;
+}
+.inactive {
+    border: 1px solid #fff;
+    background-color: var(--primary-color-light);
+    z-index: 1;
+}
+.active {
+    border: 1px solid var(--primary-color);
+    background-color: #fff;
     z-index: 2;
 }
 #search-doctor .tablink img {
@@ -265,6 +263,12 @@ span.icon-arrowdown {
 }
 .bg-white {
     background-color: rgba(255, 255, 255, 0.8);
+}
+.hidden {
+    display: none!important;
+}
+.shown {
+    display: block;
 }
 header {
     background-color: #fff;

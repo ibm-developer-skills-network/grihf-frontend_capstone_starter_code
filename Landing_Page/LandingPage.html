@@ -42,9 +42,9 @@
       <h2>Find a doctor <br />at your own ease</h2>
       <div class="width100 padding20">
         <div id="search-doctor" class="choice">
-          <button class="tablink active" onclick="openSearch(event, 'Locally')"><img src="./img/locally.svg" />Locally</button>
-          <button class="tablink" onclick="openSearch(event, 'Virtual')"><img src="./img/virtual.svg" />Virtual</button>
-          <fieldset id="locally" class="search-doctor">
+          <button class="tablink active" data-target="search-doctor-tab-1"><img src="./img/locally.svg" />Locally</button>
+          <button class="tablink inactive no-space" data-target="search-doctor-tab-2"><img src="./img/virtual.svg" />Virtual</button>
+          <fieldset class="search-doctor-tab shown" id="search-doctor-tab-1">
             <div class="input-container">
               <img src="./img/magnifying.svg" class="field-icon" />
               <input type="text" placeholder="Name, Speciality or Institution" class="line-after"/>
@@ -53,13 +53,13 @@
             <input type="text" placeholder="Where? (City, Zipcode or Address)" />
             <button class="button blue">Search</button>
           </fieldset>
-          <fieldset id="virtual" class="search-doctor" style="display:none">
+          <fieldset class="search-doctor-tab hidden" id="search-doctor-tab-2">
             <div class="input-container">
               <img src="./img/magnifying.svg" class="field-icon" />
               <input type="text" placeholder="Name, Speciality or Institution" class="line-after"/>
             </div>
             <img src="./img/location.svg" class="field-icon" />
-            <input type="text" placeholder="Where? (City, Zipcode or Address)" />
+            <input type="text" placeholder="How? (Phone or Video Call)" />
             <button class="button blue">Search</button>
           </fieldset>
         </div>

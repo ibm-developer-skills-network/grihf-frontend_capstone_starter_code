@@ -111,7 +111,7 @@ function Home() {
                             image={healthTipsGuidance}
                             alt=""
                         />
-                        <h1 style={{fontSize: "12px" , marginLeft:"28px"}}> Health Tips and Guidance</h1>
+                        <h1 style={{fontSize: "12px" , marginLeft:"26px"}}> Health Tips and Guidance</h1>
                      
                         </CardActionArea>
                          </Card>

@@ -35,7 +35,9 @@ function Home() {
                     </CardContent>
                     <CardActions>
                         <Button variant="contained" color="success" style={{width:"50%", marginLeft:"140px"}}>
-                            Try for Free
+                            <Typography>
+                                Try for Free
+                            </Typography>
                         </Button>
                     </CardActions>
                 </Card>

@@ -31,6 +31,7 @@ function DoctorCard ({name, speciality, experience, ratings}){
     //   setShowAppointmentForm(true);
     // };
     
+    
     const storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
     if (!storedDoctorData || !Array.isArray(storedDoctorData)) {
         return (

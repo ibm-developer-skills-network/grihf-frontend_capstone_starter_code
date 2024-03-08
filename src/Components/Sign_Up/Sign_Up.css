@@ -1,5 +1,4 @@
 .container {
-    max-width: 900px;
     margin: 0 auto;
     padding: 40px;
     margin-top: 10%;
@@ -67,7 +66,6 @@
 }
 
 .form-control {
-    width: 40%;
     padding: 8px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -95,5 +93,13 @@
 .btn-danger {
     background-color: #dc3545;
     color: #fff;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg,#2190FF 2.34%,#b673f8 100.78%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
 

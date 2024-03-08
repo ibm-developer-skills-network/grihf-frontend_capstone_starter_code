@@ -30,6 +30,7 @@ function Navbar () {
     const handleClose = () => {
       setAnchorEl(null);
     };
+    // Check if the user is logged
     const userName = sessionStorage.getItem("email");
     const extractedName = userName ? userName.split('@')[0] : '';
     const isUser = userName !== null;
@@ -46,7 +47,7 @@ function Navbar () {
                             viewBox="0 0 1000 1000"
                             style={{ fill: "#3685fb" }}
                         >
-                            {/* Your SVG icon */}
+                            {/* SVG icon */}
                         </svg>
                     </Link>    
                 </div>
@@ -64,33 +65,48 @@ function Navbar () {
                        <Typography>Reviews</Typography>
                     </Link>
                     <div>
-                    <Button
-                        id="fade-button"
-                        aria-controls={open ? 'fade-menu' : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={handleClick}
-                    >
-                    <Typography>Welcome, {isUser && <span>{extractedName}</span>}</Typography>
-                    </Button>
-                    <Menu
-                        id="fade-menu"
-                        MenuListProps={{
-                        'aria-labelledby': 'fade-button',
-                        }}
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={handleClose}
-                        TransitionComponent={Fade}
-                    >
-                    <MenuItem onClick={handleClose}><Typography>Welcome, {isUser && <span>{extractedName}</span>}</Typography></MenuItem>
-                    <Link to="/user-profil"><MenuItem onClick={handleClose}>Profil</MenuItem></Link>
-                    <MenuItem onClick={handleClose}>Reports</MenuItem>
-                    </Menu>
-                </div>
-                    
+                        <Button
+                            id="fade-button"
+                            aria-controls={open ? 'fade-menu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open ? 'true' : undefined}
+                            onClick={handleClick}
+                        >
+                        <Typography>
+                            Welcome, {isUser && <span>{extractedName}</span>}
+                        </Typography>
+                        </Button>
+                        <Menu
+                            id="fade-menu"
+                            MenuListProps={{
+                            'aria-labelledby': 'fade-button',
+                            }}
+                            anchorEl={anchorEl}
+                            open={open}
+                            onClose={handleClose}
+                            TransitionComponent={Fade}
+                        >
+                            <MenuItem onClick={handleClose}>
+                                <Typography>
+                                    Welcome, {isUser && <span>{extractedName}</span>}
+                                </Typography>
+                            </MenuItem>
+                            <Link to="/user-profil">
+                                <MenuItem onClick={handleClose}>
+                                    Profil
+                                </MenuItem>
+                            </Link>
+                            <MenuItem onClick={handleClose}>
+                                Reports
+                            </MenuItem>
+                        </Menu>
+                    </div> 
                     <li className="link">
-                        <Button onClick={handleLogout} variant="outlined" color="error">
+                        <Button 
+                            onClick={handleLogout} 
+                            variant="outlined" 
+                            color="error"
+                            >
                             Logout
                         </Button>
                     </li>
@@ -121,15 +137,15 @@ function Navbar () {
                     <Link to="/services" className="link">
                         <a>Home</a>
                     </Link>
-                    <li className="link">
-                        <a href="#">Appointments</a>
-                    </li>
+                    <Link to="/signup" className="link">
+                        <a>Appointments</a>
+                    </Link>
                     <li className="link">
                         <a href="#">Health Blog</a>
                     </li>
-                    <li>
-                        <a href="#">Reviews</a>
-                    </li>
+                    <Link>
+                        <a>Reviews</a>
+                    </Link>
                     <Link to="/signup" className="link">
                         <button className="btn1">Sign Up</button>
                     </Link>

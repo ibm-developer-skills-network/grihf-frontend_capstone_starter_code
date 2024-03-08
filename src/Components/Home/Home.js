@@ -17,50 +17,22 @@ Image by <a href="https://www.freepik.com/free-vector/doctor-examining-patient-c
 
 function Home() {
     return (
-        <div> 
-           <div style={{marginTop:"130px",marginLeft:"30%"}}>
-           <div >
-                <Card style={{width:"70%", height:"200px"}}>
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div" style={{marginLeft:"120px"}}>
-                            WE PROVIDE BEST MEDICAL SERVICE
-                        </Typography>
-                        <Typography variant="subtitle1" component="div">
-                            Which problem you faced on your health?
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            Take a look on our Best Health care solution and make an appointment with our experts who can solved your problem.
-                        </Typography>
-                        {/* <Typography>Love yourself enough to live a healthy lifestyle</Typography> */}
-                    </CardContent>
-                    <CardActions>
-                        <Button variant="contained" color="success" style={{width:"50%", marginLeft:"140px"}}>
-                            <Typography>
-                                Try for Free
-                            </Typography>
-                        </Button>
-                    </CardActions>
-                </Card>
-            </div>
-           </div>
-            
-            <div className="service-box"style={{display:"flex", alignItems:"row",justifyContent:"space-between",marginTop:"100px", marginRight:"170px"}} >
-                <div >
-                </div>
-                <div >
+        <div>     
+            <div className="service-box"style={{display:"flex", alignItems:"row",justifyContent:"space-between",marginTop:"200px", marginLeft:"100px",maxWidth:"80%"}} >
+                <div>
                     <div>
                        <Card style={{width:"200px", height:"220px"}}>
-                        <CardActionArea>
-                           <CardMedia
-                            component="img"
-                            height="140"
-                            image={consultationOnline}
-                            alt=""
-                        />
-                        <Link to="/instant-consultation">
-                        <h1 style={{fontSize: "12px", marginLeft:"28px"}}>Instant Consultation</h1>
-                        </Link> 
-                        </CardActionArea>
+                            <CardActionArea>
+                            <CardMedia
+                                    component="img"
+                                    height="140"
+                                    image={consultationOnline}
+                                    alt=""
+                                />
+                                <Link to="/instant-consultation">
+                                <h1 style={{fontSize: "12px", marginLeft:"28px"}}>Instant Consultation</h1>
+                                </Link> 
+                            </CardActionArea>
                         </Card>
                     </div>:
                 </div>
@@ -104,22 +76,60 @@ function Home() {
                 <div>
                     <div>
                        <Card style={{width:"200px", height:"220px"}}>
-                        <CardActionArea>
-                           <CardMedia
-                            component="img"
-                            height="140"
-                            image={healthTipsGuidance}
-                            alt=""
-                        />
-                        <h1 style={{fontSize: "12px" , marginLeft:"26px"}}> Health Tips and Guidance</h1>
-                     
-                        </CardActionArea>
-                         </Card>
+                            <CardActionArea>
+                            <CardMedia
+                                component="img"
+                                height="140"
+                                image={healthTipsGuidance}
+                                alt=""
+                            />
+                            <h1 style={{fontSize: "12px" , marginLeft:"26px"}}> Health Tips and Guidance</h1>
+                        
+                            </CardActionArea>
+                        </Card>
                     </div>
                 </div>
             </div>
-        
+            <div style={{marginTop:"70px",marginLeft:"30%"}}>
+                <div >
+                <Card style={{width:"70%", height:"200px"}}>
+                    <CardContent>
+                        <Typography 
+                            gutterBottom 
+                            variant="h5" 
+                            component="div" 
+                            style={{marginLeft:"120px"}}
+                        >
+                            WE PROVIDE BEST MEDICAL SERVICE
+                        </Typography>
+                        <Typography 
+                            variant="subtitle1" 
+                            component="div"
+                        >
+                            Which problem you faced on your health?
+                        </Typography>
+                            <Typography 
+                                variant="body2" 
+                                color="text.secondary"
+                            >
+                                Take a look on our Best Health care solution and make an appointment with our experts who can solved your problem.
+                            </Typography>
+                            {/* <Typography>Love yourself enough to live a healthy lifestyle</Typography> */}
+                    </CardContent>
+                        <CardActions>
+                            <Button 
+                                variant="contained" 
+                                color="success" 
+                                style={{width:"50%", marginLeft:"140px"}}
+                            >
+                                <Typography>Try for Free</Typography>
+                            </Button>
+                        </CardActions>
+                </Card>
+                </div>
+           </div>
         </div>
+        
     )
 }
 
